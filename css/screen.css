@@ -1,0 +1,450 @@
+body{
+	font-family: Arial, sans-serif;
+	background-image:url(../images/body.png);
+	font-size: 15px;
+	line-height:23px;
+}
+
+
+#wrapper{
+   min-height:100%;
+   position:relative;
+}
+/************************ NAVIGATION ************************/
+nav{
+	height: 94px;
+	background-color: #EC4B2E;
+	margin-bottom: 50px;
+	font-size: 15px;
+	text-transform: capitalize;
+}
+
+
+nav li{
+	display: inline;
+	
+}
+
+nav #logo{
+	padding-top: 10px;
+	float:left;	
+	
+}
+
+nav #main{
+	width: 550px;
+	/* float: left; */
+	/* overflow: auto; */
+	/* margin-top: 13px; */
+	margin: 0 auto;
+	
+	padding-top: 35px;
+}
+
+nav #login{
+	/* float: right; */
+	/* overflow: auto; */
+	/* margin-top: 5px; */
+	position: absolute;
+	right: 20px;
+	top: 20px;
+}
+
+
+
+
+nav a{
+	text-decoration: none;
+	color: white;
+	padding:20px;
+	padding-top: 38px;
+	padding-bottom: 38px;
+	
+}
+
+nav a:hover{
+	text-decoration: none; 
+	
+	background-color: #D3361C;
+	
+}
+
+.active{
+	text-decoration: none; 
+	
+	background-color: #D3361C;
+	
+}
+
+#login input[type="text"], #login input[type="password"], #login input[type="button"], #login input[type="submit"] {
+	width: 100px;
+	height: 25px;
+	font-size: 12px;
+	margin-bottom: 5px;
+	border-radius: 3px;
+	border-color:#D3361C;
+	border-style: solid;
+	border-width: 1px;
+	
+}
+
+#login input[type="text"]{
+	margin-top: 5px;
+	
+}
+
+#login input[type="button"]{
+	margin-right: 20px;
+}
+
+
+input[type="text"]
+{
+border-radius: 5px;
+}
+
+input[type="password"]
+{
+border-radius: 5px;
+}
+
+input[type="button"]
+{
+border-radius: 5px;
+background-color: #00A0AE;
+color:white;
+}
+
+input[type="submit"]
+{
+border-radius: 5px;
+background-color: #00A0AE;
+color:white;
+}
+
+
+select
+{
+border-radius: 5px;
+}
+
+textarea
+{
+border-radius: 5px;
+}
+
+#logo a:hover{
+	background-color: transparent;
+}
+
+#Register{
+	text-decoration: none;
+	color: white;
+	
+	padding:0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	
+}
+
+nav #logout{
+	/* float: right; */
+	/* overflow: auto; */
+	/* margin-top: 5px; */
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	height: 50px;	
+	max-width: 200px;
+	width: 100%;
+}
+
+#nameLogout {
+	text-align: right;
+}
+nav #nameLogout li{
+	display: block;
+}
+
+#logout img {
+	float: left;
+}
+
+nav #logout a{
+	text-decoration: none;
+	color: white;
+	background-color: transparent;
+	padding:0px;
+	/*padding-top: 0px;
+	padding-bottom: 0px;
+	margin-bottom: 10px;
+	margin-right:10px;
+	margin-left:-20px;
+	float:right;*/
+}
+
+nav #logout a:hover{
+	color: #D3361C;
+}
+/************************ NAVIGATION ************************/
+
+/************************ CONTENT ************************/
+#container{
+	overflow: auto;
+	width:100%;
+    max-width:960px;
+	margin: 0 auto;
+	background-color: #F4F4F4;
+	padding: 30px;
+	font-weight:normal;
+	min-height:550px;
+	
+}
+
+#container input[type="text"], input[type="password"]{
+	border-style: solid;
+	border-width: 1px;
+	color:#A8A8A8;
+	margin-top:4px;
+	
+}
+
+#containerRegister{
+	overflow: auto;
+	width:100%;
+    max-width:960px;
+	margin: 0 auto;
+	line-height:32px;
+	background-color: #F4F4F4;
+	padding: 30px;
+	padding-left: 170px;
+	color: #00A0AE;
+	font-size: 18px;
+	min-height:550px;
+	
+}
+
+#containerRegister input[type="submit"], input[type="button"] {
+	border-radius: 5px;
+	background-color: #00A0AE;
+	color:white;
+	border-style: solid;
+	border-width: 1px;
+	border-color: white;
+	width: 100px;
+	height: 25px;
+	font-size: 14px;
+	
+}
+
+#containerRegister input[type="file"]{
+	background-color: #00A0AE;
+	padding: 5px;
+	color:white;
+	border-radius: 5px;
+}
+
+#containerRegister input[type="text"], input[type="password"]{
+	border-style: solid;
+	border-width: 1px;
+	color:#A8A8A8;
+	margin-top:4px;
+	width: 170px;
+	
+}
+
+#containerRegister legend{
+	font-size: 20px;
+	font-weight: bold;
+	
+}
+
+#containerRegister a{
+	padding-top : 30px;
+	border: 1px solid white;
+	background-color: #00A0AE;
+	color: white;
+	padding: 10px;
+	margin: 10px 0;
+	font-size: 14px;
+	text-decoration: none;
+	width: 500px;
+	display: block;
+	height: 50px;
+}
+
+#userMadePosts {
+	float: left;
+}
+#icon {
+	float: right;
+}
+
+.avatar{
+	border-radius: 5px;
+	background-color: #00A0AE;
+	color:white;
+	padding:5px;
+}
+
+
+
+article{
+	overflow: auto;
+	width:100%;
+    max-width:960px;
+	margin: 0 auto;
+	background-color: #F4F4F4;
+	padding: 30px;
+	padding-bottom: 55px; 
+}
+
+article input[type="submit"]{
+	border-style: solid;
+	border-width: 1px;
+	border-color: white;
+	width: 150px;
+	height: 50px;	
+}
+
+article input[type="text"]{
+	border-style: solid;
+	border-width: 1px;
+	color:#A8A8A8;
+	
+}
+
+h1, h2, h3{
+	color: #00A0AE;
+	margin-bottom: 15px;
+
+}
+
+h1{
+	font-size: 22px;
+}
+
+h2{
+	font-size: 17px;
+}
+
+h3{
+	font-size: 15px;
+}
+#list h2{
+	float: left;
+}
+
+#list h3{
+	float: left;
+	padding-top: 4px;
+	padding-left: 5px;
+}
+
+
+
+textarea{
+	width: 100%;
+	resize: none;
+	height: 150px;
+}
+
+#leftCol{
+	float: left;
+	width: 48%;
+	
+}
+
+#frmpasswordleft{
+	float: left;
+	width: 50%;
+	line-height:33px;
+}
+
+#post{
+	float: right;
+	width: 48%;
+}
+#post .feedback{
+	font-size: 12px;
+	color: green;
+}
+
+#postList{
+
+}
+
+#list .topPost{
+	height: 45px;
+}
+
+#leftRegister{
+	float: left;
+	width: 40%;
+	line-height:30px;
+}
+
+#leftProfile{
+	float: left;
+	width: 40%;
+	line-height:30px;
+}
+
+#formreset, #btnRegister{
+	width:150px;;	
+}
+
+.comments{
+	border: 1px solid white;
+	background-color: #00A0AE;
+	color: white;
+	padding: 10px;
+	margin: 10px 0;
+	font-size: 14px;
+}
+
+#submitComment{
+	border-style: solid;
+	border-width: 1px;
+	border-color: white;
+	width: 150px;
+	height: 50px;
+	
+}
+.postedBy{
+	font-size: 11px;
+}
+
+#password{
+	cursor:pointer;
+}
+
+#frmPassword {
+	padding: 5%;
+    display: none;
+	width: 65%;
+}
+
+#userProfile h3{
+	display: inline;
+}
+/************************ CONTENT ************************/
+
+/************************ FOOTER ************************/
+footer{
+	height: 55px;
+	background-color: #EC4B2E;
+	margin-top: 50px;
+	font-size: 15px;
+	text-transform: capitalize;
+	position: fixed;
+	color: white;
+	width: 100%;
+	bottom: 0;
+}
+#footerContent{
+	width: 215px;
+	margin: 0 auto;
+	padding-top: 15px;
+}
+/************************ FOOTER ************************/
