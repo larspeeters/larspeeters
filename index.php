@@ -27,10 +27,14 @@ $age = (date("md", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birt
     <link href='http://fonts.googleapis.com/css?family=Share+Tech' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Orbitron:400,700' rel='stylesheet' type='text/css'>
     
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon/favicon1.ico">
 	<script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="bootstrap-3.3.4-dist/js/bootstrap.js"></script>
-
+    <script>
+        function flip() {
+            $('.card').toggleClass('flipped');
+        }
+    </script>
 </head>
 
 <body>
@@ -59,7 +63,7 @@ $age = (date("md", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birt
     </section>-->
     <section class="sub">
             	<img src="images/profile/profile.jpg" align="left"  width="600" id="profilepic" alt="Profielfoto Lars Peeters" title="Lars Peeters"/>
-          <div id="identity" ><h2>.Wie ben ik? {</h2>
+          <div id="identity" class="desktop"><h2>.Wie ben ik? {</h2>
               <ul id="about">
           	<li class="aboutMe">Naam :: Peeters;</li>
             <li class="aboutMe">Voornaam :: Lars;</li>
@@ -68,7 +72,7 @@ $age = (date("md", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birt
             <li class="aboutMe">Interesses :: Webdevelopment, softwaredevelopment, video games;</li>
           </ul><h3>}</h3>
               </div>
-        <div id="skills">
+        <div id="skills" class="desktop">
         <h2>Vaardigheden worden geladen...</h2>
             <ul >
                 <li class="skill">[HTML5 / CSS3] <progress value="75" max="100" ></progress></li>
@@ -79,6 +83,33 @@ $age = (date("md", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birt
                 <li class="skill">[Drupal 7] <progress value="40" max="100" ></progress></li>
             </ul>
         </div>
+        <section class="container">
+            <div class="card" onclick="flip()">
+                <div class="front">
+                    <div id="identity" class="mob" style="display: none;" ><h2>.Wie ben ik? {</h2>
+            <ul id="about">
+                <li class="aboutMe">Naam :: Peeters;</li>
+                <li class="aboutMe">Voornaam :: Lars;</li>
+                <li class="aboutMe">Leeftijd :: <?php echo $age?> jaar;</li>
+                <li class="aboutMe">Woonplaats :: Vilvoorde, België;</li>
+                <li class="aboutMe">Interesses :: Webdevelopment, softwaredevelopment, video games;</li>
+            </ul><h3>}</h3>
+        </div>
+                    </div>
+                <div class="back">
+        <div id="skills" class="mob" style="display: none;">
+            <h2>Vaardigheden worden geladen...</h2>
+            <ul >
+                <li class="skill">[HTML5 / CSS3] <progress value="75" max="100" ></progress></li>
+                <li class="skill">[JavaScript / jQuery] <progress value="60" max="100" ></progress> </li>
+                <li class="skill">[PHP] <progress value="65" max="100" ></progress></li>
+                <li class="skill">[Visual Basic / C#] <progress value="70" max="100" ></progress> </li>
+                <li class="skill">[Linux] <progress value="30" max="100" ></progress></li>
+                <li class="skill">[Drupal 7] <progress value="40" max="100" ></progress></li>
+            </ul>
+        </div>
+                </div>
+            </div>
     </section>
     <section id="studies">
         <h2>/**Werkervaring**/</h2>

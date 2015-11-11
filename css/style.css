@@ -99,7 +99,6 @@ nav > a:visited{
 }
 /*CONTENT*/
 
-
 .sub{
 	border-bottom: solid 5px #1e3152;
 	width: 100%;
@@ -123,6 +122,7 @@ h3{
 }
 #identity{
 	width: 50%;
+	font-style: italic;
 	height: 400px;
 	margin-left: 40%;
 }
@@ -276,84 +276,147 @@ progress[aria-valuenow]:before  {
 }
 
 /*MOBILE*/
-@media (max-width:768px){
-	.sub{
+@media (max-width:768px) {
+	.mob {
+		display: block !important;
+	}
+
+	.desktop {
+		display: none;
+	}
+
+	.sub {
 		margin-left: 0;
 		height: 200%;
 		padding: 10%;
 	}
-	.slogan{
+
+	.slogan {
 		width: 80%;
 		min-width: 300px;
 		text-align: center;
 	}
-	nav > ul > li > a{
+
+	nav > ul > li > a {
 
 		background-color: #1e3152 !important;
 	}
-	nav > ul > li > a:hover, .active{
-		background-color: #a8b2bb  !important;
+
+	nav > ul > li > a:hover, .active {
+		background-color: #a8b2bb !important;
 		border: none;
 		box-shadow: none;
 	}
-	nav, nav > ul, nav > ul > li, nav > ul > li > a{
+
+	nav, nav > ul, nav > ul > li, nav > ul > li > a {
 		width: 100% !important;
-		margin:0 !important;
-		
+		margin: 0 !important;
+
 	}
+
 	nav, nav > ul {
 		width: 100% !important;
 		margin: 0 !important;
 		padding: 0 !important;
 	}
 
-	#container{
+	#container {
 		height: 100%;
 	}
-	#profilepic{
+
+	#profilepic {
 		width: 100%;
-		margin:0;
+		margin: 0;
 		display: block;
 	}
-	#identity{
-		padding-top: 5%;
-		position: relative !important;
+
+	#identity {
+		position: relative;
 		clear: both;
 		width: 100%;
 		margin: 0;
 	}
-	#about{
+
+	#about {
 		width: 90%;
 	}
+
 	/*STUDIES*/
-	#studies{
+	#studies {
 		padding: 5px;
 		height: 100%;
 	}
 
-	#studies h2{
+	#studies h2 {
 		text-align: center;
 		margin: 20px 0 20px 0;
 	}
-	.achievement{
+
+	.achievement {
 		background-color: grey;
 		padding: 10px;
 		width: 100%;
 		margin-bottom: 10px;
 	}
-	.achievement p{
+
+	.achievement p {
 		text-align: center;
 	}
-/*VAARDIGHEDEN*/
-	#skills{
+
+	/*VAARDIGHEDEN*/
+	#skills {
 		width: 100%;
 		margin: 0;
 		font-size: 16px;
 		font-weight: bold;
 	}
 
-	h2{
+	h2 {
 		font-size: 28px;
+	}
+
+	.container {
+		-webkit-perspective: 800px;
+		-moz-perspective: 800px;
+		-o-perspective: 800px;
+		perspective: 800px;
+	}
+	.card {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		-webkit-transition: -webkit-transform 1s;
+		-moz-transition: -moz-transform 1s;
+		-o-transition: -o-transform 1s;
+		transition: transform 1s;
+		-webkit-transform-style: preserve-3d;
+		-moz-transform-style: preserve-3d;
+		-o-transform-style: preserve-3d;
+		transform-style: preserve-3d;
+		-webkit-transform-origin: 50% 50%;
+	}
+	.card div {
+		display: block;
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		-webkit-backface-visibility: hidden;
+		-moz-backface-visibility: hidden;
+		-o-backface-visibility: hidden;
+		backface-visibility: hidden;
+	}
+
+	.card .back {
+		-webkit-transform: rotateY( 180deg );
+		-moz-transform: rotateY( 180deg );
+		-o-transform: rotateY( 180deg );
+		transform: rotateY( 180deg );
+	}
+	.card.flipped {
+		-webkit-transform: rotateY( 180deg );
+		-moz-transform: rotateY( 180deg );
+		-o-transform: rotateY( 180deg );
+		transform: rotateY( 180deg );
 	}
 }
 
