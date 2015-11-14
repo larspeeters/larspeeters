@@ -83,10 +83,10 @@ $age = (date("md", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birt
                 <li class="skill">[Drupal 7] <progress value="40" max="100" ></progress></li>
             </ul>
         </div>
-        <section class="container">
+        <div class="cardcontainer mob"  style="display: none;">
             <div class="card" onclick="flip()">
                 <div class="front">
-                    <div id="identity" class="mob" style="display: none;" ><h2>.Wie ben ik? {</h2>
+                    <div id="identity"  ><h2>.Wie ben ik? {</h2>
             <ul id="about">
                 <li class="aboutMe">Naam :: Peeters;</li>
                 <li class="aboutMe">Voornaam :: Lars;</li>
@@ -97,7 +97,7 @@ $age = (date("md", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birt
         </div>
                     </div>
                 <div class="back">
-        <div id="skills" class="mob" style="display: none;">
+        <div id="skills" >
             <h2>Vaardigheden worden geladen...</h2>
             <ul >
                 <li class="skill">[HTML5 / CSS3] <progress value="75" max="100" ></progress></li>
@@ -110,6 +110,7 @@ $age = (date("md", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birt
         </div>
                 </div>
             </div>
+        </div>
     </section>
     <section id="studies">
         <h2>/**Werkervaring**/</h2>
