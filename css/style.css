@@ -101,7 +101,6 @@ nav > a:visited{
 
 .sub{
 	border-bottom: solid 5px #1e3152;
-
 	height: 100%;
 	padding: 30px;
 }
@@ -235,7 +234,6 @@ progress[aria-valuenow]:before  {
 	margin-top: 3% !important;
 }
 .achievement{
-	background-color: grey;
 	display: inline-block;
 	width: 35%;
 	padding: 10px;
@@ -282,10 +280,11 @@ progress[aria-valuenow]:before  {
 	}
 
 	.desktop {
-		display: none !important;
+		display: none;
 	}
 
 	.sub {
+		height: 120%;
 		margin-left: 0;
 		padding-left: 10%;
 		padding-top: 0;
@@ -345,6 +344,7 @@ progress[aria-valuenow]:before  {
 	/*STUDIES*/
 	#studies {
 		padding: 5px;
+		margin-left: 10%;
 		height: 100%;
 	}
 
@@ -354,7 +354,6 @@ progress[aria-valuenow]:before  {
 	}
 
 	.achievement {
-		background-color: grey;
 		padding: 10px;
 		width: 100%;
 		margin-bottom: 10px;

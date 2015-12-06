@@ -62,8 +62,9 @@ $age = (date("md", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birt
         <div class="media github"></div>
     </section>-->
     <section class="sub">
-            	<img src="images/profile/profile.jpg" align="left"  width="600" id="profilepic" alt="Profielfoto Lars Peeters" title="Lars Peeters"/>
-          <div id="identity" class="desktop"><h2>.Wie ben ik? {</h2>
+          <img src="images/profile/profile.jpg" align="left"  width="600" id="profilepic" alt="Profielfoto Lars Peeters" title="Lars Peeters"/>
+        <div class="desktop" >
+        <div id="identity"><h2>.Wie ben ik? {</h2>
               <ul id="about">
           	<li class="aboutMe">Naam :: Peeters;</li>
             <li class="aboutMe">Voornaam :: Lars;</li>
@@ -72,7 +73,7 @@ $age = (date("md", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birt
             <li class="aboutMe">Interesses :: Webdevelopment, softwaredevelopment, video games;</li>
           </ul><h3>}</h3>
               </div>
-        <div id="skills" class="desktop">
+        <div id="skills" >
         <h2>Vaardigheden worden geladen...</h2>
             <ul >
                 <li class="skill">[HTML5 / CSS3] <progress value="75" max="100" ></progress></li>
@@ -82,6 +83,7 @@ $age = (date("md", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birt
                 <li class="skill">[Linux] <progress value="30" max="100" ></progress></li>
                 <li class="skill">[Drupal 7] <progress value="40" max="100" ></progress></li>
             </ul>
+        </div>
         </div>
         <div class="cardcontainer mob"  style="display: none;">
             <div class="card" onclick="flip()">
@@ -110,37 +112,30 @@ $age = (date("md", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birt
         </div>
                 </div>
             </div>
-        </div>
+            </div>
     </section>
-    <section id="studies">
+    <section class="sub" id="studies">
         <h2>/**Werkervaring**/</h2>
-        <article class="achievement">
-            <img src="images/studies/ThomasMore.png" width="200px" alt="Thomas More Mechelen" title="Thomas More Mechelen" />
-            <p>
+        <article class="achievement"><p>
                 <strong>Software Engineer</strong><br/>
                 Conac<br/>
                 December 2014 - ???
             </p>
         </article>
-        <article class="achievement">
-            <img src="images/studies/HUB.jpg" width="69px" alt="Hogeschool - Universiteit Brussel" title="Hogeschool - Universiteit Brussel" />
-            <p>
+        <article class="achievement"><p>
                 <strong>C# programmer //Stage//</strong><br/>
                 NVSM Brussel <br/>
                 Februari 2013 - Juni 2013
             </p>
         </article>
         <h2>/**Studies**/</h2>
-        <article class="achievement">
-            <img src="images/studies/ThomasMore.png" width="200px" alt="Thomas More Mechelen" title="Thomas More Mechelen" />
-            <p>
+        <article class="achievement"><p>
                 <strong>Interactive Multimedia Design.</strong><br/>
                 Thomas More Mechelen <br/>
                 2013 - 2014
             </p>
         </article>
         <article class="achievement">
-            <img src="images/studies/HUB.jpg" width="69px" alt="Hogeschool - Universiteit Brussel" title="Hogeschool - Universiteit Brussel" />
             <p>
                 <strong>Toegepaste Informatica.</strong><br/>
                 Hogeschool - Universiteit Brussel <br/>
@@ -148,5 +143,6 @@ $age = (date("md", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birt
             </p>
         </article>
     </section>
+    </div>
 </body>
 </html>
