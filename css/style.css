@@ -233,13 +233,28 @@ progress[aria-valuenow]:before  {
 #studies > h2{
 	margin-top: 3% !important;
 }
+
 .achievement{
+	position: relative;
 	display: inline-block;
 	width: 35%;
 	padding: 10px;
 	margin-top: 2%;
 	margin-right: 10%;
 }
+
+.achievement:before, .achievement:after{
+	content: '';
+	display: block;
+	height: 100%;
+	width: 25px;
+	border: 5px solid #ccc;
+	position: absolute;
+	top: -5px;
+}
+.achievement:before{ left: 0; border-right: 0; }
+.achievement:after{ right: 0; border-left: 0; }
+
 .achievement img{
 	float: left;
 }
