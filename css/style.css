@@ -367,10 +367,8 @@ progress[aria-valuenow]:before  {
 
 	/*STUDIES*/
 	#studies {
-		padding: 5px;
-		margin-left: 10%;
 		height: 100%;
-		width: 80%;
+		width: 100%;
 	}
 
 	#studies h2 {
@@ -379,8 +377,7 @@ progress[aria-valuenow]:before  {
 	}
 
 	.achievement {
-		padding: 10px;
-		width: 100%;
+		width: 90%;
 		margin-bottom: 10px;
 	}
 
@@ -450,6 +447,29 @@ progress[aria-valuenow]:before  {
 		-o-transform: rotateY( 180deg );
 		transform: rotateY( 180deg );
 	}
+
+	#myCarousel, #myCarousel .carousel-control, #myCarousel a:hover, #myCarousel .item{
+		background: none !important;
+	}
+
+	#myCarousel div{
+		margin-left: -10% !important;
+		margin-right: -10% !important;
+	}
+
+	#myCarousel .item{
+		height: 150px !important;
+		margin-left: 10% !important;
+	}
+
+	#myCarousel .glyphicon{
+		margin-top: -30px !important;
+	}
+
+	#myCarousel a.left{
+		left: -10% !important;
+	}
+
 
 }
 

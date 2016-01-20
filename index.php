@@ -29,11 +29,12 @@ $age = (date("md", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birt
     
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon/favicon1.ico">
 	<script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="bootstrap-3.3.4-dist/js/bootstrap.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script>
         function flip() {
             $('.card').toggleClass('flipped');
         }
+
     </script>
 </head>
 
@@ -96,6 +97,7 @@ $age = (date("md", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birt
                 <li class="aboutMe">Woonplaats :: Vilvoorde, België;</li>
                 <li class="aboutMe">Interesses :: Webdevelopment, softwaredevelopment, video games;</li>
             </ul><h3>}</h3>
+             <div style="text-align: center;">...Flip me!...</div>
         </div>
                     </div>
                 <div class="back">
@@ -109,6 +111,7 @@ $age = (date("md", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birt
                 <li class="skill">[Linux] <progress value="30" max="100" ></progress></li>
                 <li class="skill">[Drupal 7] <progress value="40" max="100" ></progress></li>
             </ul>
+
         </div>
                 </div>
             </div>
@@ -116,18 +119,56 @@ $age = (date("md", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birt
     </section>
     <section class="sub" id="studies">
         <h2>/**Werkervaring**/</h2>
-        <article class="achievement"><p>
+        <article class="achievement desktop"><p>
                 <strong>Software Engineer</strong><br/>
                 Conac<br/>
                 December 2014 - ???
             </p>
         </article>
-        <article class="achievement"><p>
+        <article class="achievement desktop"><p>
                 <strong>C# programmer //Stage//</strong><br/>
                 NVSM Brussel <br/>
                 Februari 2013 - Juni 2013
             </p>
         </article>
+        <div id="myCarousel" class="carousel slide mob" style="display: none;" >
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <article class="achievement"><p>
+                            <strong>Software Engineer</strong><br/>
+                            Conac<br/>
+                            December 2014 - ???
+                        </p>
+                    </article>
+                </div>
+
+                <div class="item">
+                    <article class="achievement"><p>
+                            <strong>C# programmer //Stage//</strong><br/>
+                            NVSM Brussel <br/>
+                            Februari 2013 - Juni 2013
+                        </p>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+
+            </a>
+        </div>
         <h2>/**Studies**/</h2>
         <article class="achievement"><p>
                 <strong>Interactive Multimedia Design.</strong><br/>
@@ -142,6 +183,8 @@ $age = (date("md", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birt
                 2010 - 2013
             </p>
         </article>
+
+
     </section>
     </div>
 </body>
