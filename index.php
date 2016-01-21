@@ -118,7 +118,7 @@ $age = (date("md", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birt
             </div>
     </section>
     <section class="sub" id="studies">
-        <h2>/**Werkervaring**/</h2>
+        <h2>--Werkervaring--</h2>
         <article class="achievement desktop"><p>
                 <strong>Software Engineer</strong><br/>
                 Conac<br/>
@@ -131,11 +131,11 @@ $age = (date("md", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birt
                 Februari 2013 - Juni 2013
             </p>
         </article>
-        <div id="myCarousel" class="carousel slide mob" style="display: none;" >
+        <div id="workCarousel" class="carousel slide mob" style="display: none;" >
             <!-- Indicators -->
             <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#workCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#workCarousel" data-slide-to="1"></li>
             </ol>
 
             <!-- Wrapper for slides -->
@@ -160,30 +160,68 @@ $age = (date("md", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birt
             </div>
 
             <!-- Left and right controls -->
-            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <a class="left carousel-control" href="#workCarousel" role="button" data-slide="prev">
                 <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
             </a>
-            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <a class="right carousel-control" href="#workCarousel" data-slide="next">
                 <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 
             </a>
         </div>
-        <h2>/**Studies**/</h2>
-        <article class="achievement"><p>
+        <h2>--Studies--</h2>
+        <article class="achievement desktop"><p>
                 <strong>Interactive Multimedia Design.</strong><br/>
                 Thomas More Mechelen <br/>
                 2013 - 2014
             </p>
         </article>
-        <article class="achievement">
+        <article class="achievement desktop">
             <p>
                 <strong>Toegepaste Informatica.</strong><br/>
                 Hogeschool - Universiteit Brussel <br/>
                 2010 - 2013
             </p>
         </article>
+        <div id="studyCarousel" class="carousel slide mob" style="display: none;" >
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#studyCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#studyCarousel" data-slide-to="1"></li>
+            </ol>
 
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <article class="achievement"><p>
+                            <strong>Interactive Multimedia Design.</strong><br/>
+                            Thomas More Mechelen <br/>
+                            2013 - 2014
+                        </p>
+                    </article>
+                </div>
+
+                <div class="item">
+                    <article class="achievement">
+                        <p>
+                            <strong>Toegepaste Informatica.</strong><br/>
+                            Hogeschool - Universiteit Brussel <br/>
+                            2010 - 2013
+                        </p>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#studyCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#studyCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+
+            </a>
+        </div>
 
     </section>
     </div>

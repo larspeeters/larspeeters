@@ -448,25 +448,25 @@ progress[aria-valuenow]:before  {
 		transform: rotateY( 180deg );
 	}
 
-	#myCarousel, #myCarousel .carousel-control, #myCarousel a:hover, #myCarousel .item{
+	.carousel, .carousel .carousel-control, .carousel a:hover, .carousel .item{
 		background: none !important;
 	}
 
-	#myCarousel div{
+	.carousel div{
 		margin-left: -10% !important;
 		margin-right: -10% !important;
 	}
 
-	#myCarousel .item{
+	.carousel .item{
 		height: 150px !important;
 		margin-left: 10% !important;
 	}
 
-	#myCarousel .glyphicon{
+	.carousel .glyphicon{
 		margin-top: -30px !important;
 	}
 
-	#myCarousel a.left{
+	.carousel a.left{
 		left: -10% !important;
 	}
 
