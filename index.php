@@ -20,6 +20,7 @@ $age = (date("md", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birt
     <meta property="og:description" content="Portfolio van Lars Peeters."/>
 
 	<title>Lars Peeters</title>
+
     <!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
@@ -42,8 +43,8 @@ $age = (date("md", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birt
 
 <body>
 	<header class="navbar navbar-static-top">
-         <p class="slogan navbar-brand">< Coding is a lifestyle ></p>
-        <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+        <img src="images/profile/profile_icon.gif" width="50" id="profileIcon" style="display: none;" /> <p class="slogan navbar-brand">< Coding is a lifestyle ></p>
+        <!--<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
         	<span class="icon-bar" ></span>
             <span class="icon-bar" ></span>
             <span class="icon-bar" ></span>
@@ -51,11 +52,9 @@ $age = (date("md", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birt
         <nav class="collapse navbar-collapse navHeaderCollapse">
             <ul class="nav navbar-nav" >
                 <li ><a href=# class="menuLink">Over mij</a></li>
-                <li ><a href=# class="menuLink">Portfolio</a></li>
-                <li ><a href=# class="menuLink">Contact </a></li>     
             </ul>
         </nav>
-        
+        -->
     </header>
     <div id="container">
     <section class="sub">
@@ -221,12 +220,6 @@ $age = (date("md", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birt
 
     </section>
     <section class="sub" >
-            <!--
-                Facebook
-                Github
-                LinkedIn
-                Email
-            -->
         <div id="social">
             <span class="contactText">GET IN TOUCH</span><br/>
             <div id="mail"><span class="glyphicon glyphicon-envelope"></span>peeters.lars@telenet.be</div>
