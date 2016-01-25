@@ -1,4 +1,5 @@
-<?php $birthDate = explode("/", "09/29/1992");
+<?php
+$birthDate = explode("/", "09/29/1992");
 //get age from date or birthdate
 $age = (date("md", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birthDate[2]))) > date("md")
 ? ((date("Y") - $birthDate[2]) - 1)
@@ -40,7 +41,7 @@ $age = (date("md", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birt
 
 <body>
 	<header class="navbar navbar-static-top">
-         <p class="slogan navbar-brand">< Coding is a lifestyle ></p>    
+         <p class="slogan navbar-brand">< Coding is a lifestyle ></p>
         <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
         	<span class="icon-bar" ></span>
             <span class="icon-bar" ></span>
@@ -48,24 +49,18 @@ $age = (date("md", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birt
         </button>
         <nav class="collapse navbar-collapse navHeaderCollapse">
             <ul class="nav navbar-nav" >
-                <li ><a href=# class="menuLink active">Over mij</a></li>
+                <li ><a href=# class="menuLink">Over mij</a></li>
                 <li ><a href=# class="menuLink">Portfolio</a></li>
                 <li ><a href=# class="menuLink">Contact </a></li>     
-            </ul>              
+            </ul>
         </nav>
         
     </header>
-    <div id="container"><!--
-    <section class="contact">
-    	<div class="media mail"></div>
-        <div class="media facebook"></div>
-        <div class="media linkedin"></div>
-        <div class="media github"></div>
-    </section>-->
+    <div id="container">
     <section class="sub">
           <img src="images/profile/profile.jpg" align="left"  width="600" id="profilepic" alt="Profielfoto Lars Peeters" title="Lars Peeters"/>
         <div class="desktop" >
-        <div id="identity"><h2>.Wie ben ik? {</h2>
+        <div id="identity"><h2>.WieBenIk? {</h2>
               <ul id="about">
           	<li class="aboutMe">Naam :: Peeters;</li>
             <li class="aboutMe">Voornaam :: Lars;</li>
@@ -117,7 +112,7 @@ $age = (date("md", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birt
             </div>
             </div>
     </section>
-    <section class="sub" id="studies">
+    <section class="sub" id="achievements">
         <h2>--Werkervaring--</h2>
         <article class="achievement desktop"><p>
                 <strong>Software Engineer</strong><br/>
@@ -223,6 +218,24 @@ $age = (date("md", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birt
             </a>
         </div>
 
+    </section>
+    <section class="sub" >
+            <!--
+                Facebook
+                Github
+                LinkedIn
+                Email
+            -->
+        <div id="social">
+            <div id="mail"><span class="glyphicon glyphicon-envelope"></span>peeters.lars@telenet.be</div>
+            <div id="profiles">
+<span>GET IN TOUCH</span>
+            <a href=# ><span class="media glyphicon glyphicon-paperclip"></span></a>
+            <a href=# ><img class="media" alt="Facebook Profile" title="Facebook" width="50" src="images\media\fb.gif" /></a>
+            <a href=# ><img class="media" alt="Github Profile" title="Github" width="50" src="images\media\github.png" /></a>
+            <a href=# ><img class="media" alt="LinkedIn Profile" title="LinkedIn" width="50" src="images\media\linked.png" /></a>
+            <span >WITH ME.</span></div>
+        </div>
     </section>
     </div>
 </body>

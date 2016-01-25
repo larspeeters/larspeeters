@@ -64,8 +64,8 @@ ul > li {
 		padding-top: 20px;
 		display: inline !important;
 		height: 100% !important;
-		
-	
+
+
 }
 
 nav > ul > li > a{
@@ -73,9 +73,9 @@ nav > ul > li > a{
   	color: white;
   position:relative !important;
   height: 100% !important;
-  
+
 	background-color: transparent !important;
-  
+
 }
 
 nav > ul > li > a:hover {
@@ -225,12 +225,12 @@ progress[aria-valuenow]:before  {
 
 
 /*STUDIES*/
-#studies{
+#achievements{
 	width: 100%;
 	padding-left: 7%;
 }
 
-#studies > h2{
+#achievements > h2{
 	margin-top: 3% !important;
 }
 
@@ -271,29 +271,44 @@ progress[aria-valuenow]:before  {
 	text-align: center;
 }
 
-/*CONTACT MEDIA*/
-.contact{
-	top: 20%;
-	cursor: pointer;
-	position: fixed;
+/*CONTACT*/
+#social{
+	background-color: grey;
+	width: 100%;
+	text-align: center;
+	padding: 5%;
+}
+#mail{
+	margin-left: 42%;
+	margin-right: 35%;
+	text-align: left;
+	border-radius: 2%;
+	padding: 0.5%;
+	width: 15%;
+}
+
+#mail span{
+	top: 5px;
+	margin-right: 10px;
 }
 .media{
-	width: 25px;
-	height: 25px;
-	background-color: black;
-	
+	border: solid #ccc 1px;
+	border-radius: 50%;
 }
 
-.facebook{
-	background-color: #039;
+.media{
+	transition: all 0.7s ease-in-out;
 }
 
-.linkedin{
-	background-color: #C30;
+.media:hover{
+	-ms-transform: rotate(360deg); /* IE 9 */
+	-webkit-transform: rotate(360deg); /* Safari */
+	transform: rotate(360deg);
 }
 
-.github{
-	background-color: #090;
+.glyphicon-paperclip{
+	padding: 0.9%;
+	color: #ccc;
 }
 
 /*MOBILE*/
@@ -366,12 +381,12 @@ progress[aria-valuenow]:before  {
 	}
 
 	/*STUDIES*/
-	#studies {
+	#achievements {
 		height: 100%;
 		width: 100%;
 	}
 
-	#studies h2 {
+	#achievements h2 {
 		text-align: center;
 		margin: 20px 0 20px 0;
 	}
@@ -459,7 +474,7 @@ progress[aria-valuenow]:before  {
 
 	.carousel .item{
 		height: 150px !important;
-		margin-left: 10% !important;
+		margin-left: 15% !important;
 	}
 
 	.carousel .glyphicon{
@@ -467,7 +482,7 @@ progress[aria-valuenow]:before  {
 	}
 
 	.carousel a.left{
-		left: -10% !important;
+		left: -5% !important;
 	}
 
 
