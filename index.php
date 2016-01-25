@@ -227,15 +227,16 @@ $age = (date("md", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birt
                 Email
             -->
         <div id="social">
+            <span class="contactText">GET IN TOUCH</span><br/>
             <div id="mail"><span class="glyphicon glyphicon-envelope"></span>peeters.lars@telenet.be</div>
             <div id="profiles">
-<span>GET IN TOUCH</span>
+
             <a href=# ><span class="media glyphicon glyphicon-paperclip"></span></a>
             <a href=# ><img class="media" alt="Facebook Profile" title="Facebook" width="50" src="images\media\fb.gif" /></a>
             <a href=# ><img class="media" alt="Github Profile" title="Github" width="50" src="images\media\github.png" /></a>
             <a href=# ><img class="media" alt="LinkedIn Profile" title="LinkedIn" width="50" src="images\media\linked.png" /></a>
-            <span >WITH ME.</span></div>
         </div>
+            <span class="contactText"><br/>WITH ME.</span></div>
     </section>
     </div>
 </body>

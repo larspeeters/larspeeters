@@ -273,18 +273,27 @@ progress[aria-valuenow]:before  {
 
 /*CONTACT*/
 #social{
-	background-color: grey;
 	width: 100%;
 	text-align: center;
 	padding: 5%;
+
+}
+#profiles{
+	height: 30px;
+	width: 15%;
+	margin-left: 42%;
 }
 #mail{
-	margin-left: 42%;
+	margin-left: 43%;
 	margin-right: 35%;
 	text-align: left;
 	border-radius: 2%;
 	padding: 0.5%;
 	width: 15%;
+}
+
+.contactText{
+	font-size: 36px;
 }
 
 #mail span{
@@ -294,11 +303,9 @@ progress[aria-valuenow]:before  {
 .media{
 	border: solid #ccc 1px;
 	border-radius: 50%;
-}
-
-.media{
 	transition: all 0.7s ease-in-out;
 }
+
 
 .media:hover{
 	-ms-transform: rotate(360deg); /* IE 9 */
@@ -307,7 +314,7 @@ progress[aria-valuenow]:before  {
 }
 
 .glyphicon-paperclip{
-	padding: 0.9%;
+	padding: 6%;
 	color: #ccc;
 }
 
