@@ -27,6 +27,7 @@ $age = (date("md", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birt
     <link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Share+Tech' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Orbitron:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
     
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon/favicon1.ico">
 	<script src="http://code.jquery.com/jquery-latest.js"></script>
@@ -163,7 +164,7 @@ $age = (date("md", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birt
                 <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 
             </a>
-        </div>
+        </div><br/><br/>
         <h2>--Studies--</h2>
         <article class="achievement desktop"><p>
                 <strong>Interactive Multimedia Design.</strong><br/>
@@ -231,12 +232,12 @@ $age = (date("md", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birt
             <div id="mail"><span class="glyphicon glyphicon-envelope"></span>peeters.lars@telenet.be</div>
             <div id="profiles">
 
-            <a href=# ><span class="media glyphicon glyphicon-paperclip"></span></a>
-            <a href=# ><img class="media" alt="Facebook Profile" title="Facebook" width="50" src="images\media\fb.gif" /></a>
-            <a href=# ><img class="media" alt="Github Profile" title="Github" width="50" src="images\media\github.png" /></a>
-            <a href=# ><img class="media" alt="LinkedIn Profile" title="LinkedIn" width="50" src="images\media\linked.png" /></a>
+            <a href="attachments/cv_Lars_Peeters.pdf" target="_blank"><img class="media" alt="Curriculum Vitae" title="Curriculum Vitae" width="50" src="images\media\document.png" /></a>
+            <a href="https://www.facebook.com/MightyM92" target="_blank" ><img class="media" alt="Facebook Profile" title="Facebook" width="50" src="images\media\fb.gif" /></a>
+            <a href="https://github.com/larspeeters" target="_blank" ><img class="media" alt="Github Profile" title="Github" width="50" src="images\media\github.png" /></a>
+            <a href="http://lnkd.in/j4fqUA" target="_blank" ><img class="media" alt="LinkedIn Profile" title="LinkedIn" width="50" src="images\media\linked.png" /></a>
         </div>
-            <span class="contactText"><br/>WITH ME.</span></div>
+            <br/> <span class="contactText"><br/>WITH ME.</span></div>
     </section>
     </div>
 </body>
