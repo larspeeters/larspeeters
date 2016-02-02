@@ -3,7 +3,19 @@ $birthDate = explode("/", "09/29/1992");
 //get age from date or birthdate
 $age = (date("md", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birthDate[2]))) > date("md")
 ? ((date("Y") - $birthDate[2]) - 1)
-: (date("Y") - $birthDate[2]));?>
+: (date("Y") - $birthDate[2]));
+
+require_once "translator.php";
+$lang = new translator();
+$lng = "";
+switch($_SERVER['QUERY_STRING']){
+    case "en":   $lng =  $_SERVER['QUERY_STRING'];
+                break;
+    default:     $lng = "nl";
+                break;
+}
+
+?>
 <!DOCTYPE HTML>
 <html lang="nl">
 <head>
@@ -44,7 +56,9 @@ $age = (date("md", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birt
 <body>
 	<header class="navbar navbar-static-top">
         <img src="images/profile/profile_icon.gif" width="50" id="profileIcon" style="display: none;" /> <p class="slogan navbar-brand">< Coding is a lifestyle ></p>
-        <!--<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+        <span id="languages">
+            <a href="http://localhost:81" >NL</a> || <a href="http://localhost:81/?en" >EN</a>
+        </span><!--<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
         	<span class="icon-bar" ></span>
             <span class="icon-bar" ></span>
             <span class="icon-bar" ></span>
@@ -60,17 +74,17 @@ $age = (date("md", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birt
     <section class="sub">
           <img src="images/profile/profile.jpg" align="left"  width="600" id="profilepic" alt="Profielfoto Lars Peeters" title="Lars Peeters"/>
         <div class="desktop" >
-        <div id="identity"><h2>.WieBenIk? {</h2>
+        <div id="identity"><h2>.<?php  echo $lang->t("WieBenIk?", $lng); ?>{</h2>
               <ul id="about">
-          	<li class="aboutMe">Naam :: Peeters;</li>
-            <li class="aboutMe">Voornaam :: Lars;</li>
-            <li class="aboutMe">Leeftijd :: <?php echo $age?> jaar;</li>
-            <li class="aboutMe">Woonplaats :: Vilvoorde, België;</li>
-            <li class="aboutMe">Interesses :: Webdevelopment, softwaredevelopment, video games;</li>
+          	<li class="aboutMe"><?php  echo $lang->t("Naam", $lng) ?> :: Peeters;</li>
+            <li class="aboutMe"><?php  echo $lang->t("Voornaam", $lng) ?>  :: Lars;</li>
+            <li class="aboutMe"><?php  echo $lang->t("Leeftijd", $lng) ?>  :: <?php echo $age?> jaar;</li>
+            <li class="aboutMe"><?php  echo $lang->t("Woonplaats", $lng) ?>  :: Vilvoorde, <?php echo $lang->t("België", $lng) ?> ;</li>
+            <li class="aboutMe"><?php  echo $lang->t("Interesses", $lng) ?>  :: Webdevelopment, softwaredevelopment, video games;</li>
           </ul><h3>}</h3>
               </div>
         <div id="skills" >
-        <h2>Vaardigheden worden geladen...</h2>
+        <h2><?php  echo $lang->t("Vaardigheden worden geladen...", $lng) ?></h2>
             <ul >
                 <li class="skill">[HTML5 / CSS3] <progress value="75" max="100" ></progress></li>
                 <li class="skill">[JavaScript / jQuery] <progress value="60" max="100" ></progress> </li>
@@ -113,7 +127,7 @@ $age = (date("md", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birt
             </div>
     </section>
     <section class="sub" id="achievements">
-        <h2>--Werkervaring--</h2>
+        <h2>--<?php  echo $lang->t("Werkervaring",$lng);  ?>--</h2>
         <article class="achievement desktop"><p>
                 <strong>Software Engineer</strong><br/>
                 Conac<br/>
@@ -164,7 +178,7 @@ $age = (date("md", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birt
 
             </a>
         </div><br/><br/>
-        <h2>--Studies--</h2>
+        <h2>--<?php  echo $lang->t("Studies", $lng); ?>--</h2>
         <article class="achievement desktop"><p>
                 <strong>Interactive Multimedia Design.</strong><br/>
                 Thomas More Mechelen <br/>
@@ -173,7 +187,7 @@ $age = (date("md", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birt
         </article>
         <article class="achievement desktop">
             <p>
-                <strong>Toegepaste Informatica.</strong><br/>
+                <strong><?php  echo $lang->t("Toegepaste Informatica", $lng); ?>.</strong><br/>
                 Hogeschool - Universiteit Brussel <br/>
                 2010 - 2013
             </p>
@@ -221,7 +235,7 @@ $age = (date("md", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birt
     </section>
     <section class="sub" >
         <div id="social">
-            <span class="contactText">GET IN TOUCH</span><br/>
+            <span class="contactText"><?php  echo $lang->t("LEER MIJ", $lng); ?></span><br/>
             <div id="mail"><span class="glyphicon glyphicon-envelope"></span>peeters.lars@telenet.be</div>
             <div id="profiles">
 
@@ -230,7 +244,7 @@ $age = (date("md", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birt
             <a href="https://github.com/larspeeters" target="_blank" ><img class="media" alt="Github Profile" title="Github" width="50" src="images\media\github.png" /></a>
             <a href="http://lnkd.in/j4fqUA" target="_blank" ><img class="media" alt="LinkedIn Profile" title="LinkedIn" width="50" src="images\media\linked.png" /></a>
         </div>
-            <br/> <span class="contactText"><br/>WITH ME.</span></div>
+            <br/> <span class="contactText"><br/> <?php  echo $lang->t("KENNEN.", $lng); ?></span></div>
     </section>
     </div>
 </body>
