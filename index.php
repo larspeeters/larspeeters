@@ -5,13 +5,12 @@ $age = (date("md", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birt
 ? ((date("Y") - $birthDate[2]) - 1)
 : (date("Y") - $birthDate[2]));
 
-require_once "translator.php";
-$lang = new translator();
-$lng = "";
+require_once "classes/translator.php";
+
 switch($_SERVER['QUERY_STRING']){
-    case "en":   $lng =  $_SERVER['QUERY_STRING'];
+    case "en":  $lang = new translator("en");
                 break;
-    default:     $lng = "nl";
+    default:   $lang = new translator("nl");;
                 break;
 }
 
@@ -25,11 +24,11 @@ switch($_SERVER['QUERY_STRING']){
 	<meta name="keywords" content="Lars, Peeters, ICT, developer" />
 	<meta name="author" content="Lars Peeters" />
     <meta property="og:type" content="website"/>
-    <meta property="og:image" content="images/favicon/favicon.png"/>
+    <meta property="og:image" content="images/background/background.png"/>
     <meta property="og:url" content="http://www.larspeeters.be"/>
     <meta property="og:title" content="Lars Peeters - Programmer"/>
     <meta property="og:site_name" content="Lars Peeters - Programmer"/>
-    <meta property="og:description" content="Portfolio van Lars Peeters."/>
+    <meta property="og:description" content="<Coding is a lifestyle. />"/>
 
 	<title>Lars Peeters</title>
 
@@ -55,9 +54,9 @@ switch($_SERVER['QUERY_STRING']){
 
 <body>
 	<header class="navbar navbar-static-top">
-        <img src="images/profile/profile_icon.gif" width="50" id="profileIcon" style="display: none;" /> <p class="slogan navbar-brand">< Coding is a lifestyle ></p>
+        <p class="slogan navbar-brand">< Coding is a lifestyle ></p>
         <span id="languages">
-            <a href="http://localhost:81" >NL</a> || <a href="http://localhost:81/?en" >EN</a>
+            <a href="http://larspeeters.be" >NL</a> || <a href="http://larspeeters.be/?en" >EN</a>
         </span><!--<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
         	<span class="icon-bar" ></span>
             <span class="icon-bar" ></span>
@@ -74,17 +73,17 @@ switch($_SERVER['QUERY_STRING']){
     <section class="sub">
           <img src="images/profile/profile.jpg" align="left"  width="600" id="profilepic" alt="Profielfoto Lars Peeters" title="Lars Peeters"/>
         <div class="desktop" >
-        <div id="identity"><h2>.<?php  echo $lang->t("WieBenIk?", $lng); ?>{</h2>
+        <div id="identity"><h2>.<?php  echo $lang->t("WieBenIk?"); ?>{</h2>
               <ul id="about">
-          	<li class="aboutMe"><?php  echo $lang->t("Naam", $lng) ?> :: Peeters;</li>
-            <li class="aboutMe"><?php  echo $lang->t("Voornaam", $lng) ?>  :: Lars;</li>
-            <li class="aboutMe"><?php  echo $lang->t("Leeftijd", $lng) ?>  :: <?php echo $age?> jaar;</li>
-            <li class="aboutMe"><?php  echo $lang->t("Woonplaats", $lng) ?>  :: Vilvoorde, <?php echo $lang->t("België", $lng) ?> ;</li>
-            <li class="aboutMe"><?php  echo $lang->t("Interesses", $lng) ?>  :: Webdevelopment, softwaredevelopment, video games;</li>
+          	<li class="aboutMe"><?php  echo $lang->t("Naam") ?> :: Peeters;</li>
+            <li class="aboutMe"><?php  echo $lang->t("Voornaam") ?>  :: Lars;</li>
+            <li class="aboutMe"><?php  echo $lang->t("Leeftijd") ?>  :: <?php echo $age?> jaar;</li>
+            <li class="aboutMe"><?php  echo $lang->t("Woonplaats") ?>  :: Vilvoorde, <?php echo $lang->t("België") ?> ;</li>
+            <li class="aboutMe"><?php  echo $lang->t("Interesses") ?>  :: Webdevelopment, softwaredevelopment, video games;</li>
           </ul><h3>}</h3>
               </div>
         <div id="skills" >
-        <h2><?php  echo $lang->t("Vaardigheden worden geladen...", $lng) ?></h2>
+        <h2><?php  echo $lang->t("Vaardigheden worden geladen...") ?></h2>
             <ul >
                 <li class="skill">[HTML5 / CSS3] <progress value="75" max="100" ></progress></li>
                 <li class="skill">[JavaScript / jQuery] <progress value="60" max="100" ></progress> </li>
@@ -98,20 +97,20 @@ switch($_SERVER['QUERY_STRING']){
         <div class="cardcontainer mob"  style="display: none;">
             <div class="card" onclick="flip()">
                 <div class="front">
-                    <div id="identity"  ><h2>.Wie ben ik? {</h2>
+                    <div id="identity"  ><h2>.<?php  echo $lang->t("WieBenIk?"); ?> {</h2>
             <ul id="about">
-                <li class="aboutMe">Naam :: Peeters;</li>
-                <li class="aboutMe">Voornaam :: Lars;</li>
-                <li class="aboutMe">Leeftijd :: <?php echo $age?> jaar;</li>
-                <li class="aboutMe">Woonplaats :: Vilvoorde, België;</li>
-                <li class="aboutMe">Interesses :: Webdevelopment, softwaredevelopment, video games;</li>
+                <li class="aboutMe"><?php  echo $lang->t("Naam") ?> :: Peeters;</li>
+                <li class="aboutMe"><?php  echo $lang->t("Voornaam") ?>  :: Lars;</li>
+                <li class="aboutMe"><?php  echo $lang->t("Leeftijd") ?>  :: <?php echo $age?> jaar;</li>
+                <li class="aboutMe"><?php  echo $lang->t("Woonplaats") ?>  :: Vilvoorde, <?php echo $lang->t("België") ?> ;</li>
+                <li class="aboutMe"><?php  echo $lang->t("Interesses") ?>  :: Webdevelopment, softwaredevelopment, video games;</li>
             </ul><h3>}</h3>
              <div style="text-align: center;">...Flip me!...</div>
         </div>
                     </div>
                 <div class="back">
         <div id="skills" >
-            <h2>Vaardigheden worden geladen...</h2>
+            <h2><?php  echo $lang->t("Vaardigheden worden geladen...") ?></h2>
             <ul >
                 <li class="skill">[HTML5 / CSS3] <progress value="75" max="100" ></progress></li>
                 <li class="skill">[JavaScript / jQuery] <progress value="60" max="100" ></progress> </li>
@@ -127,7 +126,7 @@ switch($_SERVER['QUERY_STRING']){
             </div>
     </section>
     <section class="sub" id="achievements">
-        <h2>--<?php  echo $lang->t("Werkervaring",$lng);  ?>--</h2>
+        <h2>--<?php  echo $lang->t("Werkervaring");  ?>--</h2>
         <article class="achievement desktop"><p>
                 <strong>Software Engineer</strong><br/>
                 Conac<br/>
@@ -137,7 +136,7 @@ switch($_SERVER['QUERY_STRING']){
         <article class="achievement desktop"><p>
                 <strong>C# programmer //Stage//</strong><br/>
                 NVSM Brussel <br/>
-                Februari 2013 - Juni 2013
+                <?php  echo $lang->t("Februari"); ?> 2013 - <?php  echo $lang->t("Juni"); ?> 2013
             </p>
         </article>
         <div id="workCarousel" class="carousel slide mob" style="display: none;" >
@@ -162,7 +161,7 @@ switch($_SERVER['QUERY_STRING']){
                     <article class="achievement"><p>
                             <strong>C# programmer //Stage//</strong><br/>
                             NVSM Brussel <br/>
-                            Februari 2013 - Juni 2013
+                            <?php  echo $lang->t("Februari"); ?> 2013 - <?php  echo $lang->t("Juni"); ?> 2013
                         </p>
                     </article>
                 </div>
@@ -178,7 +177,7 @@ switch($_SERVER['QUERY_STRING']){
 
             </a>
         </div><br/><br/>
-        <h2>--<?php  echo $lang->t("Studies", $lng); ?>--</h2>
+        <h2>--<?php  echo $lang->t("Studies"); ?>--</h2>
         <article class="achievement desktop"><p>
                 <strong>Interactive Multimedia Design.</strong><br/>
                 Thomas More Mechelen <br/>
@@ -187,7 +186,7 @@ switch($_SERVER['QUERY_STRING']){
         </article>
         <article class="achievement desktop">
             <p>
-                <strong><?php  echo $lang->t("Toegepaste Informatica", $lng); ?>.</strong><br/>
+                <strong><?php  echo $lang->t("Toegepaste Informatica"); ?>.</strong><br/>
                 Hogeschool - Universiteit Brussel <br/>
                 2010 - 2013
             </p>
@@ -213,7 +212,7 @@ switch($_SERVER['QUERY_STRING']){
                 <div class="item">
                     <article class="achievement">
                         <p>
-                            <strong>Toegepaste Informatica.</strong><br/>
+                            <strong><?php  echo $lang->t("Toegepaste Informatica"); ?>.</strong><br/>
                             Hogeschool - Universiteit Brussel <br/>
                             2010 - 2013
                         </p>
@@ -235,8 +234,8 @@ switch($_SERVER['QUERY_STRING']){
     </section>
     <section class="sub" >
         <div id="social">
-            <span class="contactText"><?php  echo $lang->t("LEER MIJ", $lng); ?></span><br/>
-            <div id="mail"><span class="glyphicon glyphicon-envelope"></span>peeters.lars@telenet.be</div>
+            <span class="contactText">GET IN TOUCH</span><br/>
+            <div id="mail"><span class="glyphicon glyphicon-envelope" title="Mail"></span>peeters.lars@telenet.be</div>
             <div id="profiles">
 
             <a href="attachments/cv_Lars_Peeters.pdf" target="_blank"><img class="media" alt="Curriculum Vitae" title="Curriculum Vitae" width="50" src="images\media\document.png" /></a>
@@ -244,7 +243,7 @@ switch($_SERVER['QUERY_STRING']){
             <a href="https://github.com/larspeeters" target="_blank" ><img class="media" alt="Github Profile" title="Github" width="50" src="images\media\github.png" /></a>
             <a href="http://lnkd.in/j4fqUA" target="_blank" ><img class="media" alt="LinkedIn Profile" title="LinkedIn" width="50" src="images\media\linked.png" /></a>
         </div>
-            <br/> <span class="contactText"><br/> <?php  echo $lang->t("KENNEN.", $lng); ?></span></div>
+            <br/> <span class="contactText"><br/> WITH ME.</span></div>
     </section>
     </div>
 </body>

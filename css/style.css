@@ -1,7 +1,7 @@
 /*BODY*/
 html,
 body {
-	background: url("/images/background/background.png") no-repeat fixed;
+	background: url("../images/background/background.png") no-repeat fixed;
 	background-size: cover; background-color: #a8b2bb; color:#ccc;
    font:110% 'Share Tech','Economica',Tahoma,sans-serif; 
    line-height:1.3em; 
@@ -16,7 +16,7 @@ header{
 	background-color: #1e3152;
 	height: 10%;
 	width: 100%;
-	position: absolute;
+	position: fixed !important;
 	padding-top: 0.7%;
 	display: block;
 	min-width: 500px;
@@ -35,6 +35,15 @@ header{
 	text-align: center;
 	font-family:'Orbitron', sans-serif;
 	font-weight: bold;
+}
+
+#languages{
+	float: right;
+	margin: 2% 5% 0 0;
+}
+
+#languages  a{
+	color: #ccc !important;
 }
 
 .icon-bar{
@@ -94,8 +103,8 @@ nav > a:visited{
 
 /*CONTAINER*/
 #container{
-	top: 10%;
 	width: 100%;
+	padding-top: 5%;
 }
 /*CONTENT*/
 
@@ -319,11 +328,6 @@ progress[aria-valuenow]:before  {
 		display: none;
 	}
 
-	#profileIcon{
-		display: block !important;
-		float: left;
-		margin-left: 10%;
-	}
 
 	.sub {
 		height: auto;
@@ -333,12 +337,15 @@ progress[aria-valuenow]:before  {
 
 	}
 
+
 	.slogan {
-		margin-top:10px;
 		width: auto;
+		margin-left: 15%;
 		min-width: 300px;
 		text-align: center;
 	}
+
+
 
 	nav > ul > li > a {
 
@@ -366,6 +373,7 @@ progress[aria-valuenow]:before  {
 	#container {
 		height: 100%;
 		min-width: 550px;
+		padding-top: 15% !important;
 	}
 
 	#profilepic {
