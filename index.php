@@ -43,6 +43,7 @@ switch($_SERVER['QUERY_STRING']){
     
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon/favicon1.ico">
 	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script src="scripts/konami.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script>
         function flip() {
@@ -246,5 +247,27 @@ switch($_SERVER['QUERY_STRING']){
             <br/> <span class="contactText"><br/> WITH ME.</span></div>
     </section>
     </div>
+    <div id="konami" class="achievement"><b>Cowabunga,<br/>You have activated a secret konami code!</b>
+        <br/><span id="closeKonami">Now let me geek on.</span></div>
+    <!-- Start of StatCounter Code for Default Guide -->
+    <script type="text/javascript">
+        var sc_project=10915724;
+        var sc_invisible=1;
+        var sc_security="3c845052";
+        var scJsHost = (("https:" == document.location.protocol) ?
+            "https://secure." : "http://www.");
+        document.write("<sc"+"ript type='text/javascript' src='" +
+            scJsHost+
+            "statcounter.com/counter/counter.js'></"+"script>");
+    </script>
+    <noscript><div class="statcounter"><a title="shopify
+analytics ecommerce" href="http://statcounter.com/shopify/"
+                                          target="_blank"><img class="statcounter"
+                                                               src="http://c.statcounter.com/10915724/0/3c845052/1/"
+                                                               alt="shopify analytics ecommerce"></a></div></noscript>
+    <!-- End of StatCounter Code for Default Guide -->
+<script>
+
+</script>
 </body>
 </html>
