@@ -25,15 +25,13 @@ header{
 }
 
 .slogan{
-	font-style:italic;
-	font-size:150%;
+	font-size:50px;
 	min-width: 500px;
 	width:40%;
 	height: 100%;
-	padding-top: 2%;
+	margin-left:6%;
 	color: #ccc;
-	text-align: center;
-	font-family:'Orbitron', sans-serif;
+	font-family: 'Jockey One', sans-serif;
 	font-weight: bold;
 }
 
@@ -192,8 +190,8 @@ progress[role]     /* polyfill */
 	width: 400px;
 	height: 20px;
 
-
 }
+
 
 /* Polyfill */
 progress[role]:after {
@@ -224,6 +222,7 @@ progress::-webkit-progress-bar {
 }
 progress::-webkit-progress-value {
 	background: #1e3152;
+
 }
 
 /* Polyfill */
@@ -231,6 +230,7 @@ progress[aria-valuenow]:before  {
 	background: #1e3152;
 
 }
+
 
 
 /*STUDIES*/

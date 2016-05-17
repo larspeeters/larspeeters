@@ -38,6 +38,7 @@ switch($_SERVER['QUERY_STRING']){
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Share+Tech' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Jockey+One' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Orbitron:400,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
     
@@ -50,12 +51,22 @@ switch($_SERVER['QUERY_STRING']){
             $('.card').toggleClass('flipped');
         }
 
+        $(document).ready(function(){
+            var skills= [75,60,65,70,30,40];
+            var counter = 0;
+            $('progress').each(function(){
+                var val = $(this).prop('value');
+                $(this).animate({
+                    value:skills[counter++],
+                }, 1500);
+            });
+        });
     </script>
 </head>
 
 <body>
 	<header class="navbar navbar-static-top">
-        <p class="slogan navbar-brand">< Coding is a lifestyle ></p>
+        <p class="slogan navbar-brand">[ Coding is a lifestyle ]</p>
         <span id="languages">
             <a href="http://larspeeters.be" >NL</a> || <a href="http://larspeeters.be/?en" >EN</a>
         </span><!--<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
@@ -86,12 +97,12 @@ switch($_SERVER['QUERY_STRING']){
         <div id="skills" >
         <h2><?php  echo $lang->t("Vaardigheden worden geladen...") ?></h2>
             <ul >
-                <li class="skill">[HTML5 / CSS3] <progress value="75" max="100" ></progress></li>
-                <li class="skill">[JavaScript / jQuery] <progress value="60" max="100" ></progress> </li>
-                <li class="skill">[PHP] <progress value="65" max="100" ></progress></li>
-                <li class="skill">[Visual Basic / C#] <progress value="70" max="100" ></progress> </li>
-                <li class="skill">[Linux] <progress value="30" max="100" ></progress></li>
-                <li class="skill">[Drupal 7] <progress value="40" max="100" ></progress></li>
+                <li class="skill">[HTML5 / CSS3] <progress value="0" max="100" ></progress></li>
+                <li class="skill">[JavaScript / jQuery] <progress value="0" max="100" ></progress> </li>
+                <li class="skill">[PHP] <progress value="0" max="100" ></progress></li>
+                <li class="skill">[Visual Basic / C#] <progress value="0" max="100" ></progress> </li>
+                <li class="skill">[Linux] <progress value="0" max="100" ></progress></li>
+                <li class="skill">[Drupal 7] <progress value="0" max="100" ></progress></li>
             </ul>
         </div>
         </div>
@@ -243,6 +254,7 @@ switch($_SERVER['QUERY_STRING']){
             <a href="https://www.facebook.com/MightyM92" target="_blank" ><img class="media" alt="Facebook Profile" title="Facebook" width="50" src="images\media\fb.gif" /></a>
             <a href="https://github.com/larspeeters" target="_blank" ><img class="media" alt="Github Profile" title="Github" width="50" src="images\media\github.png" /></a>
             <a href="http://lnkd.in/j4fqUA" target="_blank" ><img class="media" alt="LinkedIn Profile" title="LinkedIn" width="50" src="images\media\linked.png" /></a>
+            <a href="http://stackoverflow.com/users/5225115/larspeeters" target="_blank" ><img class="media" alt="StackOverflow Profile" title="StackOverflow" width="50" src="images\media\stack.png" /></a>
         </div>
             <br/> <span class="contactText"><br/> WITH ME.</span></div>
     </section>
